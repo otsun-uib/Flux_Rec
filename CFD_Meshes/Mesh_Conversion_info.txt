@@ -1,0 +1,68 @@
+
+### Converting to OpenFOAM polyMesh
+
+Each `.unv` file must be converted to OpenFOAM 
+format before use with the FTP analysis script. 
+Follow these steps for each mesh:
+
+**Step 1 — Create a minimal OpenFOAM case 
+directory:**
+
+```bash
+mkdir -p Mesh_20x20/constant
+mkdir -p Mesh_20x20/system
+```
+
+**Step 2 — Create the `system/controlDict` file:**
+
+Create the file `Mesh_20x20/system/controlDict` 
+with the following content:
+
+```
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      controlDict;
+}
+
+application     icoFoam;
+startFrom       startTime;
+startTime       0;
+stopAt          endTime;
+endTime         1;
+deltaT          1;
+writeControl    timeStep;
+writeInterval   1;
+```
+
+**Step 3 — Convert the `.unv` file:**
+
+Run the following command from inside the 
+case directory:
+
+```bash
+cd Mesh_20x20
+ideasUnvToFoam ../Mesh_20x20.unv
+```
+
+This creates `constant/polyMesh/` containing 
+`points`, `faces`, `owner`, `neighbour`, 
+and `boundary`.
+
+**Step 4 — Verify the patch name:**
+
+Open `constant/polyMesh/boundary` and confirm 
+that the receiver outer surface patch is named 
+`Tube_outer`. If your Salome export used a 
+different group name, update the patch name 
+in `ftp_analysis.py` accordingly:
+
+```python
+PATCH_NAME = "Tube_outer"  
+```
+
+**Step 5 — Repeat for all six meshes.**
+

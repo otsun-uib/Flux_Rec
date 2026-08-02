@@ -1,0 +1,2 @@
+#power_absorbed_from_source_Th irradiance_emitted(W/m2) efficiency_from_source_Th
+17175.467088846937 900.0669245339858 0.8282306137098935
