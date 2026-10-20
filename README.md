@@ -78,6 +78,7 @@ Folder containing Excel files with the raw data behind all figures in the manusc
 - **`BB_Plot_data.xlsx`** — Data to generate Figure 4
 - **`k-NN_Plot_data.xlsx`** — Data to generate Figures 5 and 6
 - **`KDE_Plot_data.xlsx`** — Data to generate Figure 7
+- **`Validation.csv`** — Data to generate Figure 4
 
 ---
 
@@ -109,6 +110,8 @@ Data files:
 - **`FTP_matrix_KDE.csv`** — 6×6 heatmap, KDE method; Figure 10, Tables 3 and 4
 - **`plot_data_solver_difficulty.csv`** — Figure 11
 - **`plot_data_metrics_summary.csv`** — Table 4, Figure 9
+- FTP Results for RunA, RunB, and RunC and the three additional MCRT realizations used for uncertainty quantification (S9) are available on request. 
+
 
 To run `ftp_analysis.py`:
 
