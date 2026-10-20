@@ -1,4 +1,4 @@
-# Supplementary Material for manuscript "A Grid-Independent Methodology for Radiative Flux Mapping and Assessment of Cylindrical Solar Receivers"
+# Supplementary Material for manuscript "Bin-Resolution-Independent Radiative Flux Mapping and Assessment for Cylindrical Solar Receivers."
 
 ## By Sainath A. Waghmare, Gabriel Cardona, and Ramón Pujol-Nadal
 
